@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotateCam : MonoBehaviour
+public class RotarCamara : MonoBehaviour
 {
-    [SerializeField, Range(0, 60), Tooltip("velocidad de rotacionde la camara")]
-    private float rotacionSpeed = 15;
+    [SerializeField, Range(0, 25)] private float speed = 15;
     
     
     
@@ -20,13 +19,12 @@ public class RotateCam : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E))
         {
-            transform.Rotate(Vector3.up * -rotacionSpeed * Time.deltaTime);
+            transform.Rotate(Vector3.up *  -speed * Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.R))
         {
-            transform.Rotate(Vector3.up * rotacionSpeed * Time.deltaTime);
+            transform.Rotate(Vector3.up * speed * Time.deltaTime);
         }
-        
     }
 }
