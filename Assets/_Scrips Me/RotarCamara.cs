@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class RotarCamara : MonoBehaviour
 {
-    [SerializeField, Range(0, 25)] private float speed = 15;
+
+    [SerializeField, Range(0, 50)] private float speedRotation = 25;
+    
+    
+    
     
     
     
@@ -17,14 +21,14 @@ public class RotarCamara : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.F))
         {
-            transform.Rotate(Vector3.up *  -speed * Time.deltaTime);
+            transform.Rotate(Vector3.up * -speedRotation * Time.deltaTime);
         }
 
-        if (Input.GetKey(KeyCode.R))
+        if (Input.GetKey(KeyCode.G))
         {
-            transform.Rotate(Vector3.up * speed * Time.deltaTime);
+            transform.Rotate(Vector3.up * speedRotation * Time.deltaTime);
         }
     }
 }
