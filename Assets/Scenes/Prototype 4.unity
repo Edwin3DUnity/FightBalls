@@ -548,8 +548,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9165c36099b4fe741871b6d85cd60449, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveForce: 1
   player: {fileID: 0}
-  moveForece: 1
 --- !u!1 &1401682123
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,7 +674,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1401682123}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2580564f80f08d649b7504b51326d9dd, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e40e0c89ab135440a1ade082196156e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveForce: 2
@@ -809,10 +809,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1854426279}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96c948dbbfcb25c4abc7e4b1080edaaa, type: 3}
+  m_Script: {fileID: 11500000, guid: d6e415876f4d0e54e87c39bfa4df639a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedRotation: 25
+  speedRotation: 90
 --- !u!850595691 &2087392793
 LightingSettings:
   m_ObjectHideFlags: 0

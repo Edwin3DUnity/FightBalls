@@ -4,26 +4,27 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private Rigidbody _rigidbody;
+    [SerializeField, Range(0, 20)] private float moveForce = 5;
+
 
     [SerializeField] private GameObject player;
 
-    [SerializeField, Range(0, 50)] private float moveForece = 5;
+    private Rigidbody _rigidbody;
     
     // Start is called before the first frame update
     void Start()
     {
-        _rigidbody = GetComponent<Rigidbody>();
-
         player = GameObject.Find("Player");
+        _rigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 direccionMovimiento = (player.transform.position - transform.position).normalized ;
+
+        Vector3 directionMove = (player.transform.position - transform.position).normalized;
         
-        _rigidbody.AddForce(direccionMovimiento * moveForece , ForceMode.Force);
+        _rigidbody.AddForce(directionMove * moveForce, ForceMode.Force);
         
     }
 }
