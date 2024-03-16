@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f01ea2c-f2bd-49ea-bd28-47260ee7a4fb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Balls Fight/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Balls Fight/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prototype 4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prototype 4.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scrips Me/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scrips Me/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scrips Me/PlayerController.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scrips Me/PlayerController.cs.meta" beforeDir="false" />
@@ -103,7 +104,7 @@
       <option name="presentableId" value="Default" />
       <updated>1710432152811</updated>
       <workItem from="1710432153947" duration="8034000" />
-      <workItem from="1710519524230" duration="5300000" />
+      <workItem from="1710519524230" duration="6004000" />
     </task>
     <servers />
   </component>
