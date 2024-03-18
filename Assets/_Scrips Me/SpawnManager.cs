@@ -5,20 +5,20 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
 
-    public GameObject enemy;
+    [SerializeField] private GameObject enemy;
 
+    [SerializeField, Range(-10, 10)] private float posX = 7;
 
-    [SerializeField] private float spwanRange = 9;
-
-    
-    
+    [SerializeField, Range(-10, 10)] private float posZ = 9;
     // Start is called before the first frame update
+
+  
     void Start()
     {
 
-        
-        
-        Instantiate(enemy, GenerarPosAleatoria(),  enemy.transform.rotation);
+
+        Instantiate(enemy, PosRandom(), enemy.transform.rotation );
+
     }
 
     // Update is called once per frame
@@ -27,20 +27,20 @@ public class SpawnManager : MonoBehaviour
         
     }
 
+    
     /// <summary>
-    /// Genera una posicion aleatoria dentro de la zona de juego
+    /// Genera una posición aleatoria en al zona del juego
     /// </summary>
-    /// 
-    /// <returns> Devuelve una posicion aleatoria dentro de la zona del juego</returns>
-    private Vector3 GenerarPosAleatoria()
+    /// <returns>Retorna un vector 3</returns>
+    private Vector3 PosRandom()
     {
-        float spawnPosx = Random.Range(-spwanRange , spwanRange);
-        float spawnPosZ = Random.Range(-spwanRange, spwanRange);
-        
-        Vector3 spawnPos = new Vector3 (spawnPosx, 0, spawnPosZ);
+        float posRandomX = Random.Range(-posX, posX);
+        float posRandomZ = Random.Range(-posZ, posZ);
 
-        return spawnPos;
+       Vector3  spawnRandom = new Vector3(posRandomX, 0.5f, posRandomZ);
+
+         return spawnRandom;
+
     }
-
-   
+    
 }

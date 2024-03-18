@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CamRotate : MonoBehaviour
+public class RotarCamera : MonoBehaviour
 {
 
-
-    [SerializeField, Range(0, 360)] private float RotationVel = 180;
+    [SerializeField, Range(0, 360)] private float RotationVel = 45;
+    
+    
     
     
     // Start is called before the first frame update
@@ -28,8 +29,6 @@ public class CamRotate : MonoBehaviour
         {
             transform.Rotate(Vector3.up * RotationVel * Time.deltaTime);
         }
-        
-        
         
     }
 }
