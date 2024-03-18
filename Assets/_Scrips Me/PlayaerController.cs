@@ -20,6 +20,12 @@ public class PlayaerController : MonoBehaviour
     public bool ActivatePowerUp;
 
     [SerializeField, Range(0, 50)] private float repulsionForce = 20;
+
+    [SerializeField] private float timePowerUP = 5;
+
+
+    public GameObject[] powerUpsIndicators;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +39,7 @@ public class PlayaerController : MonoBehaviour
     void Update()
     {
         Movimiento();
+        FollowPlayer();
     }
 
 
@@ -50,15 +57,31 @@ public class PlayaerController : MonoBehaviour
 
     }
 
+
+    private void FollowPlayer()
+    {
+        foreach (GameObject indicator in powerUpsIndicators)
+        {
+            indicator.transform.position = transform.position + 0.5f * Vector3.down ;
+            
+        }
+        
+        
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PowerUps"))
         {
-            Destroy(other.gameObject);
+            
             ActivatePowerUp = true;
+            Destroy(other.gameObject);
+            powerUpsIndicators[0].gameObject.SetActive(true);
+            StartCoroutine(PowerUPCountdown());
         }
     }
 
+    
+    
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy") && ActivatePowerUp )
@@ -70,10 +93,21 @@ public class PlayaerController : MonoBehaviour
              Debug.Log("ENemigo" + enemyRigidbody.name);
             enemyRigidbody.AddForce(repulsionDirection * repulsionForce, ForceMode.Impulse);
 
-
+            
 
         }
     }
+
+
+    IEnumerator PowerUPCountdown()
+    {
+        yield return new WaitForSeconds(timePowerUP); 
+        powerUpsIndicators[0].gameObject.SetActive(false);
+        ActivatePowerUp = false;
+        
+        
+    }
+    
 }
 
 
