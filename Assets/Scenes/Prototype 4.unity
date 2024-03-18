@@ -592,13 +592,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1401682123}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24e275d626feea644a13c33094f8ef97, type: 3}
+  m_Script: {fileID: 11500000, guid: 395cf24007462b64d855f9608af8ee56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveForce: 2
   focalPoint: {fileID: 0}
-  hasPowerUp: 0
-  replutionForce: 25
+  ActivatePowerUp: 0
+  repulsionForce: 35
 --- !u!1001 &1403545340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -729,10 +729,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1854426279}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 207df109bce94804b9d034a8aec86efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 679a0a90a422a904099d2d6024346332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotationVel: 45
+  rotationVel: 45
 --- !u!850595691 &2087392793
 LightingSettings:
   m_ObjectHideFlags: 0

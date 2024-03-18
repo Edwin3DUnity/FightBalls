@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotarCamera : MonoBehaviour
+public class RotateCamera : MonoBehaviour
 {
-
-    [SerializeField, Range(0, 360)] private float RotationVel = 45;
-    
+    [SerializeField, Range(0, 360)] private float rotationVel = 45;
     
     
     
@@ -21,14 +19,13 @@ public class RotarCamera : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E))
         {
-            transform.Rotate(Vector3.up * -RotationVel * Time.deltaTime);
-            
+            transform.Rotate(Vector3.up *  -rotationVel * Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.R))
         {
-            transform.Rotate(Vector3.up * RotationVel * Time.deltaTime);
+            transform.Rotate(Vector3.up * rotationVel * Time.deltaTime);
         }
-        
     }
+    
 }
