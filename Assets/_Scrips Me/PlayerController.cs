@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
         {
             activedPowerUps = true;
             Destroy(other.gameObject); 
-            powerupsIndicators[0].SetActive(true);
+           
             StartCoroutine("TimeWaitDesactiPowerUp");
 
         }
@@ -90,10 +90,24 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator TimeWaitDesactiPowerUp()
     {
-        yield return new WaitForSeconds(timeWaitActivedPowerUP);
+       /* for (int i = 0; i < powerupsIndicators.Length; i++)
+        {
+            powerupsIndicators[i].SetActive(true);
+            yield return new WaitForSeconds(timeWaitActivedPowerUP/powerupsIndicators.Length);
+            powerupsIndicators[i].SetActive(false);
+        }
+        */
 
+        foreach (GameObject indicator in powerupsIndicators)
+        {
+            indicator.gameObject.SetActive(true);
+            yield return new WaitForSeconds(timeWaitActivedPowerUP / powerupsIndicators.Length);
+            indicator.gameObject.SetActive(false);
+        }
+        
         activedPowerUps = false;
-        powerupsIndicators[0].SetActive(false);
-
+        
+        
+        
     }
 }
