@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f01ea2c-f2bd-49ea-bd28-47260ee7a4fb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Balls Fight/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Balls Fight/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scrips Me/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scrips Me/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scrips Me/PlayaerController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scrips Me/PlayaerController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scrips Me/RotateCamera.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scrips Me/RotateCamera.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scrips Me/SpawnManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scrips Me/SpawnManager.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +24,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/_Scrips Me/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Scrips Me/PlayaerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Scrips Me/RotateCamera.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Scrips Me/SpawnManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -37,7 +41,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Practi8",
+    "git-widget-placeholder": "pract9",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -102,6 +106,7 @@
       <workItem from="1710519524230" duration="6004000" />
       <workItem from="1710628474686" duration="3818000" />
       <workItem from="1710767358294" duration="12467000" />
+      <workItem from="1710858051722" duration="2436000" />
     </task>
     <servers />
   </component>
