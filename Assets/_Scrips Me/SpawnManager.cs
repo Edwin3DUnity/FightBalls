@@ -7,22 +7,43 @@ public class SpawnManager : MonoBehaviour
 
     [SerializeField] private GameObject enemy;
 
-    [SerializeField] private float posX = 7;
-    [SerializeField] private float posZ = 9;
+     private float posX = 7;
+     private float posZ = 9;
+
+
+
+
+    [SerializeField] private int enemyCound;
+    public int enemyWave = 1;
+    
+   
+    public GameObject powerUpPrefab;
     
     // Start is called before the first frame update
-    
-    
-    
     void Start()
     {
-        SpawnEnemyWave(3);
+        SpawnEnemyWave(enemyWave);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        enemyCound = GameObject.FindObjectsOfType<Enemy>().Length;
+       
+
+        if (enemyCound == 0)
+        {
+            enemyWave++;
+            SpawnEnemyWave(enemyWave);
+            
+            int numberOfPowerUps = Random.Range(0, 2);
+            for (int i = 0; i < numberOfPowerUps; i++)
+            {
+                Instantiate(powerUpPrefab, GenerarPosALeatoria(), powerUpPrefab.transform.rotation);
+            }
+            
+            
+        }
     }
 /// <summary>
 /// Genera Posicion Aleatorio  
@@ -30,11 +51,10 @@ public class SpawnManager : MonoBehaviour
 /// <returns></returns>
 
     private Vector3 GenerarPosALeatoria()
-    {
-        posX = Random.Range(-posX, posX);
-        posZ = Random.Range(-posZ, posZ);
-
-        Vector3 posRandom = new Vector3(posX,0.5f, posZ);
+{
+          float posRandomX = Random.Range(-posX, posX);
+          float posRandomZ = Random.Range(-posZ, posZ);
+        Vector3 posRandom = new Vector3(posRandomX,0.5f, posRandomZ);
 
         return posRandom;
 

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -72,6 +73,11 @@ public class PlayerController : MonoBehaviour
             StartCoroutine("TimeWaitDesactiPowerUp");
 
         }
+
+        if (other.CompareTag("ZoneDeath"))
+        {
+            SceneManager.LoadSceneAsync("Prototype 4");
+        }
     }
 
 
@@ -85,6 +91,7 @@ public class PlayerController : MonoBehaviour
             enemyRigidbody.AddForce(replusionDir * forceReplusion, ForceMode.Impulse );
             
         }
+       
     }
 
 
@@ -110,4 +117,17 @@ public class PlayerController : MonoBehaviour
         
         
     }
+
+
+
+    private void DeathPlayer()
+    {
+        if (transform.position.y < 2)
+        {
+            Destroy(gameObject);
+            SceneManager.LoadSceneAsync("Prototype 4");
+
+        }
+    }
+    
 }
