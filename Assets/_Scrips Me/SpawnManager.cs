@@ -16,7 +16,7 @@ public class SpawnManager : MonoBehaviour
     
     void Start()
     {
-        Instantiate(enemy, GenerarPosALeatoria(), enemy.transform.rotation);
+        SpawnEnemyWave(3);
     }
 
     // Update is called once per frame
@@ -24,7 +24,10 @@ public class SpawnManager : MonoBehaviour
     {
         
     }
-
+/// <summary>
+/// Genera Posicion Aleatorio  
+/// </summary>
+/// <returns></returns>
 
     private Vector3 GenerarPosALeatoria()
     {
@@ -35,6 +38,18 @@ public class SpawnManager : MonoBehaviour
 
         return posRandom;
 
+    }
+
+/// <summary>
+/// Spawnea un numero determinados de enemigos
+/// <param name="numberOfEnemies"> numero de enemigos a crear </param>
+/// </summary>
+    private void SpawnEnemyWave(int numberOfEnemies)
+    {
+        for (int i = 0; i < numberOfEnemies; i++)
+        {
+            Instantiate(enemy, GenerarPosALeatoria(), enemy.transform.rotation);
+        }
     }
     
 }
