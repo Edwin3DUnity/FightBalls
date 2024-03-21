@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f01ea2c-f2bd-49ea-bd28-47260ee7a4fb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Balls Fight/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Balls Fight/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scrips Me/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scrips Me/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scrips Me/SpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scrips Me/SpawnManager.cs" afterDir="false" />
-    </list>
+    <list default="true" id="6f01ea2c-f2bd-49ea-bd28-47260ee7a4fb" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,7 +98,7 @@
       <workItem from="1710628474686" duration="3818000" />
       <workItem from="1710767358294" duration="12467000" />
       <workItem from="1710858051722" duration="2436000" />
-      <workItem from="1711026733406" duration="7467000" />
+      <workItem from="1711026733406" duration="7979000" />
     </task>
     <servers />
   </component>
