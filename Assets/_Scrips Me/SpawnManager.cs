@@ -4,27 +4,45 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject enemy;
-
+    [SerializeField] private GameObject enemy;
     private float posX = 7;
-    private float posZ = 9;
+    private float PosZ = 9;
 
 
-    [SerializeField] private int enemyCount;
+    [SerializeField] private float enemyCount;
     public int enemyWave = 1;
 
-
     public GameObject powerUpPrefab;
+    
     // Start is called before the first frame update
     void Start()
     {
-       SpawnEnemyWave(enemyWave);
+        SpawnEnemyWave(enemyWave);
     }
 
     // Update is called once per frame
     void Update()
     {
-        enemyCount = GameObject.FindObjectsOfType<Enemy>().Length;
+        
+        GenerarEnemies();
+        
+        
+    }
+
+    private Vector3 GeneratePosRandom()
+    {
+        float randomPosX = Random.Range(-posX, posX);
+        float randomPosZ = Random.Range(-PosZ, PosZ);
+
+        Vector3 posRandom = new Vector3(randomPosX, 0.5f, randomPosZ);
+
+        return posRandom;
+
+    }
+
+    private void GenerarEnemies()
+    {
+        enemyCount = GameObject.FindObjectsOfType<Enemies>().Length;
 
         if (enemyCount == 0)
         {
@@ -38,27 +56,8 @@ public class SpawnManager : MonoBehaviour
             }
 
         }
+        
     }
-    /// <summary>
-    /// Genera una posicion aleatoria
-    /// </summary>
-    /// <returns></returns>
-    private Vector3 GeneratePosRandom()
-    {
-        float randomPosX = Random.Range(-7,7);
-        float randomPosZ = Random.Range(-9, 9);
-
-        Vector3 posRandom = new Vector3(randomPosX, 0.5f, randomPosZ);
-
-        return posRandom;
-
-
-    }
-
-/// <summary>
-/// Spawnea un número determinados de enemigos
-/// <param name="numberOfEnemies">numero de enemigos a crear</param>
-/// </summary>
 
     private void SpawnEnemyWave(int numberOfEnemies)
     {
@@ -67,4 +66,5 @@ public class SpawnManager : MonoBehaviour
             Instantiate(enemy, GeneratePosRandom(), enemy.transform.rotation);
         }
     }
+    
 }
