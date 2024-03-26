@@ -316,14 +316,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1105612293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88524d7b13606444787e03b2626bde21, type: 3}
+  m_Script: {fileID: 11500000, guid: feb718cd37dcccc4c9b12ad1d51b85f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 434827813753248619, guid: 3618318d4776325488fa67b49a0f1168, type: 3}
   posX: 7
   posZ: 9
   enemyWave: 1
-  powerUpsIndicator: {fileID: 6395979343676410440, guid: 2a077213f598efb4080d4d44b7e13ed2, type: 3}
+  powerUpIcon: {fileID: 6395979343676410440, guid: 2a077213f598efb4080d4d44b7e13ed2, type: 3}
 --- !u!1001 &1106510481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -758,18 +758,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1401682123}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41340b50fd2ada6468e369aa70dadeda, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c3ac56fcaa55dd4da102b8015b9b74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveForce: 15
+  moveForce: 2.5
   focalPoint: {fileID: 0}
   powerUpActivated: 0
-  replusionForce: 65
-  powerUpsIndicator:
+  replusionForce: 80
+  powerUpIcon:
   - {fileID: 1009206802}
   - {fileID: 277672137}
   - {fileID: 1689575957}
-  powerUpsDurationTime: 10
+  iconDurationTime: 10
 --- !u!1001 &1403545340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1040,10 +1040,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1854426279}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f38a653a5cadad4e971c60344e7e209, type: 3}
+  m_Script: {fileID: 11500000, guid: be2c796a75022a446a58a922f0c6d563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationGrade: 45
+  rotationAngle: 45
 --- !u!850595691 &2087392793
 LightingSettings:
   m_ObjectHideFlags: 0
