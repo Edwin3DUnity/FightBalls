@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotateCam : MonoBehaviour
-
+public class CamRotation : MonoBehaviour
 {
 
-    [SerializeField, Range(0, 360)] private float rotationAngle = 45;
-    
+    [SerializeField, Range(0, 360)] private float rotateCam = 45;
     
     
     
@@ -20,22 +18,20 @@ public class RotateCam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Rotation();
+        camRotations();
     }
 
-    private void Rotation()
+    private void camRotations()
     {
-
         if (Input.GetKey(KeyCode.E))
         {
-            transform.Rotate(Vector3.up * -rotationAngle * Time.deltaTime);
-            
+            transform.Rotate(Vector3.up * - rotateCam * Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.R))
         {
-            transform.Rotate(Vector3.up * rotationAngle * Time.deltaTime);
+            transform.Rotate(Vector3.up * rotateCam * Time.deltaTime);
         }
+        
     }
-    
 }
