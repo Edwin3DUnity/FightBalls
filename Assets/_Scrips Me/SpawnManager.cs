@@ -1,78 +1,81 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class SpawnManager : MonoBehaviour
 {
     [SerializeField] private GameObject enemy;
+    [SerializeField, Range(-15, 15)] private float posX = 7;
+    [SerializeField, Range(-15, 15)] private float posZ = 9;
 
-    [SerializeField] private float posX = 7;
-    [SerializeField] private float posZ = 9;
 
-    [SerializeField] private int enemyCount;
-    public int enemyWave = 1;
+    private float enemyCount;
+    [SerializeField] private int enemyWave =1;
 
-    public GameObject powerUPPrefab;
-    
+    [SerializeField] private GameObject powerUpsIndicator;
     // Start is called before the first frame update
     void Start()
     {
-        SpawnearEnemies(enemyWave);
-        
+        SpawnEnemies(enemyWave);
     }
 
     // Update is called once per frame
     void Update()
     {
-        CheckEnemiesScene();
+       ChecKEnemies();
     }
-    
+
     
     /// <summary>
-    /// Genera una posición Aleatoria
+    /// Genera una posición aleatoria
     /// </summary>
-    /// <returns>Retorna un Vector 3 </returns>
-    private Vector3 GenerarPosAleatoria()
+    /// <returns> </returns>
+    private Vector3 GeneraPosAleatoria()
     {
         float posXRandom = Random.Range(-posX, posX);
         float posZRandom = Random.Range(-posZ, posZ);
 
+        Vector3 posRandom = new Vector3(posXRandom, 0.5f, posZRandom);
 
+        return posRandom;
 
-        Vector3 RandomPos = new Vector3(posXRandom, 0.5f , posZRandom);
-
-        return RandomPos;
     }
 
     /// <summary>
-    /// Genera enemigos 
+    /// Spawnea enemigos
     /// </summary>
-    /// <param name="numberOfEnemies">Cantidad de enemigos a spawnear</param>
-    private void SpawnearEnemies(int numberOfEnemies)
+    /// <param name="countEnemyWave">Cantidad de enemigos a spawnear</param>
+    private void SpawnEnemies(int countEnemyWave)
     {
-        for (int i = 0; i < numberOfEnemies; i++)
+        for (int i = 0; i < countEnemyWave; i++)
         {
-            Instantiate(enemy, GenerarPosAleatoria(), enemy.transform.rotation);
+            Instantiate(enemy, GeneraPosAleatoria(), enemy.transform.rotation);
         }
-        
-        
+
     }
 
-    private void CheckEnemiesScene()
+    private void ChecKEnemies()
     {
         enemyCount = GameObject.FindObjectsOfType<Enemy>().Length;
 
         if (enemyCount == 0)
         {
             enemyWave++;
-            SpawnearEnemies(enemyWave);
+            SpawnEnemies(enemyWave);
 
-            int numberOfPowerUps = Random.Range(0, 2);
-            for(int i = 0; i < numberOfPowerUps; i ++)
+            int indicatorCount = Random.Range(0, 3);
+            for (int i = 0; i < indicatorCount; i++)
             {
-                Instantiate(powerUPPrefab, GenerarPosAleatoria(), powerUPPrefab.transform.rotation);
+                Instantiate(powerUpsIndicator, GeneraPosAleatoria(), powerUpsIndicator.transform.rotation);
             }
         }
+        {
+            
+        }
+        
     }
+    
+    
+    
+    
 }

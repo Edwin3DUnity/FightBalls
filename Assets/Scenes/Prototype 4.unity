@@ -322,9 +322,8 @@ MonoBehaviour:
   enemy: {fileID: 434827813753248619, guid: 3618318d4776325488fa67b49a0f1168, type: 3}
   posX: 7
   posZ: 9
-  enemyCount: 0
   enemyWave: 1
-  powerUPPrefab: {fileID: 6395979343676410440, guid: 2a077213f598efb4080d4d44b7e13ed2, type: 3}
+  powerUpsIndicator: {fileID: 6395979343676410440, guid: 2a077213f598efb4080d4d44b7e13ed2, type: 3}
 --- !u!1001 &1106510481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -759,17 +758,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1401682123}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c3ac56fcaa55dd4da102b8015b9b74b, type: 3}
+  m_Script: {fileID: 11500000, guid: 41340b50fd2ada6468e369aa70dadeda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveForce: 2
-  catchPowerUp: 0
-  repulsionForce: 65
+  moveForce: 15
+  focalPoint: {fileID: 0}
+  powerUpActivated: 0
+  replusionForce: 65
   powerUpsIndicator:
   - {fileID: 1009206802}
   - {fileID: 277672137}
   - {fileID: 1689575957}
-  indicatorTime: 10
+  powerUpsDurationTime: 10
 --- !u!1001 &1403545340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1040,10 +1040,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1854426279}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232a115e901f53346b34fd5ed3eb2cda, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f38a653a5cadad4e971c60344e7e209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateCam: 45
+  rotationGrade: 45
 --- !u!850595691 &2087392793
 LightingSettings:
   m_ObjectHideFlags: 0
