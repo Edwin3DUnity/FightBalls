@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class RotateCam : MonoBehaviour
 {
-
     [SerializeField, Range(0, 360)] private float rotationAngle = 45;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -16,9 +16,10 @@ public class RotateCam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKey(KeyCode.E))
         {
-            transform.Rotate(Vector3.up * - rotationAngle * Time.deltaTime);
+            transform.Rotate(Vector3.up * -rotationAngle * Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.R))

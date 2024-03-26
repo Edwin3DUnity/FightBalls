@@ -4,46 +4,44 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-
-    [SerializeField, Range(0, 30)] private float moveForce = 3.8f;
+    [SerializeField, Range(0, 20)] private float moveForce = 3.5f;
     private Rigidbody _rigidbody;
 
     [SerializeField] private GameObject player;
 
-    [SerializeField] private float hightDead = -5;
+    [SerializeField] private float higthDead = -5;
     
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
         _rigidbody = GetComponent<Rigidbody>();
+        player = GameObject.Find("Player");
+        
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        AtackPlayer();
-        
-        EnemyDeath();
+        PlayerAtack();
+        EnemyDead();
     }
 
-    private void AtackPlayer()
+    private void PlayerAtack()
     {
-        Vector3 moveDirection = (player.transform.position - transform.position).normalized;
+        Vector3 atackDirection = (player.transform.position - transform.position).normalized;
         
-        _rigidbody.AddForce(moveDirection * moveForce , ForceMode.Force);
-
+        
+        _rigidbody.AddForce(atackDirection * moveForce , ForceMode.Force);
 
     }
 
-
-    private void EnemyDeath()
+    private void EnemyDead()
     {
-        if (transform.position.y < hightDead)
+        if (transform.position.y < higthDead)
         {
             Destroy(gameObject);
         }
+        
     }
 }
