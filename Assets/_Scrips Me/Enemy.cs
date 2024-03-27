@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField, Range(0, 20)] private float moveForce = 3.5f;
+
+
+    [SerializeField, Range(0, 25)] private float moveForce = 3.6f;
     private Rigidbody _rigidbody;
+
 
     [SerializeField] private GameObject player;
 
-    [SerializeField] private float higthDead = -5;
-    
+    [SerializeField] private float HightDeath = -5;
     // Start is called before the first frame update
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
         player = GameObject.Find("Player");
-        
+
 
     }
 
@@ -24,24 +26,26 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         PlayerAtack();
-        EnemyDead();
+        EnemyDeath();
     }
+
 
     private void PlayerAtack()
     {
-        Vector3 atackDirection = (player.transform.position - transform.position).normalized;
+        Vector3 atackDir = (player.transform.position - transform.position).normalized;
+        
+        _rigidbody.AddForce(atackDir * moveForce , ForceMode.Force);
         
         
-        _rigidbody.AddForce(atackDirection * moveForce , ForceMode.Force);
 
     }
 
-    private void EnemyDead()
+    private void EnemyDeath()
     {
-        if (transform.position.y < higthDead)
+        if (transform.position.y < HightDeath)
         {
             Destroy(gameObject);
         }
-        
     }
+    
 }

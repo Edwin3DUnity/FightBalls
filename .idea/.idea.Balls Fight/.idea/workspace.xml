@@ -6,14 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="6f01ea2c-f2bd-49ea-bd28-47260ee7a4fb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Balls Fight/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Balls Fight/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prototype 4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prototype 4.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Enemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scrips Me/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scrips Me/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scrips Me/PlayerControll.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scrips Me/PlayerControll.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scrips Me/RotateCam.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scrips Me/RotateCam.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scrips Me/SpawnManagerr.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scrips Me/SpawnManagerr.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scrips Me/PlayerController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scrips Me/PlayerController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scrips Me/RotateCam.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scrips Me/RotateCam.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scrips Me/SpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scrips Me/SpawnManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +24,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/_Scrips Me/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Scrips Me/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Scrips Me/RotateCam.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Scrips Me/SpawnManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scrips Me/Player.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -45,7 +42,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Pract15",
+    "git-widget-placeholder": "Pract16",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -116,6 +113,7 @@
       <workItem from="1711293940383" duration="7602000" />
       <workItem from="1711406613264" duration="6684000" />
       <workItem from="1711460482440" duration="18250000" />
+      <workItem from="1711543569496" duration="3130000" />
     </task>
     <servers />
   </component>
